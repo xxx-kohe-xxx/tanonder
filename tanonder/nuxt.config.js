@@ -16,6 +16,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  dev: (process.env.NODE_ENV !== 'production'),
   /*
   ** Customize the progress-bar color
   */
@@ -42,8 +43,12 @@ export default {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
+  proxy: {
+    '/api': (this.dev) ? 'http://tanonder.test' : 'https://tanonder.heroku.com'
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
