@@ -16,8 +16,8 @@ Route::middleware(['cors'])->group(function(){
   Route::get('/', function(){ 
     return 'hello world';
   });
+
+  // 商品一覧取得 
+  Route::get('/products', 'ProductController@productsList');
 });
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
