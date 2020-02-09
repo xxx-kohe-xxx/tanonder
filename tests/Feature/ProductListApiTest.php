@@ -16,14 +16,15 @@ class ProductListApiTest extends TestCase
   public function should_登録してある全商品のデータを取得する()
   {
     // APIのレスポンス
-    $response = $this->json('GET', route('productList'));
+    $response = $this->json('GET', route('productsList'));
 
     // 商品データを取得
-    $products = Product::select('name', 'path', 'price', 'category')->get();
+    $products = Product::select('id', 'name', 'path', 'price', 'category')->get();
 
     // レスポンスの期待値
     $expected = $products->map(function ($product) {
       return [
+        'id' => $product->id,
         'name' => $product->name,
         'path' => $product->path,
         'price' => $product->price,
@@ -33,9 +34,6 @@ class ProductListApiTest extends TestCase
     ->all();
     
     $response->assertStatus(200)
-      ->assertJsonCount(4, 'data')
-      ->assertJsonFragment([
-        "data" => $expected,
-      ]);
+      ->assertJson($expected);
   }
 }
