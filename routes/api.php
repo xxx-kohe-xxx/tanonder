@@ -19,5 +19,8 @@ Route::middleware(['cors'])->group(function(){
 
   // 商品一覧取得 
   Route::get('/products', 'ProductController@productsList')->name('productsList');
+  
+  // 名前登録
+  Route::post('/register', 'Auth\RegisterController@create')->name('register');
 });
 
