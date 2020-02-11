@@ -1,0 +1,32 @@
+// ===========================
+// 変数
+// ===========================
+@import "./foundation/variable";
+
+// ===========================
+// foundation
+// ===========================
+@import "./foundation/mixin";
+@import "./foundation/reset";
+@import "./foundation/base";
+
+// ===========================
+// layout
+// ===========================
+// @import "./layout/**";
+
+// ===========================
+// object
+// ===========================
+
+// component
+// ---------------------------
+// @import "./object/component/**";
+
+// project
+// ---------------------------
+@import "./object/project/header";
+
+// utility
+// ---------------------------
+// @import "./object/utility/**";

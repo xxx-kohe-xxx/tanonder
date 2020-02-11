@@ -1,0 +1,14 @@
+.p-header {
+  height: 50px;
+  width: 100%;
+  background: $color-main;
+  &__title {
+    &-link {
+    font-size: $font-size-header;
+    color: $color-sub;
+    font-weight: bold;
+    padding: $spacer;
+    // フォントを変えたい
+    }
+  }
+}
