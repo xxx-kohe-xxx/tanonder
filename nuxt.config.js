@@ -25,6 +25,7 @@ export default {
   ** Global CSS
   */
   css: [
+    { src: '~/assets/scss/app.scss', lang: 'sass' }
   ],
   /*
   ** Plugins to load before mounting the App
@@ -44,8 +45,18 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/proxy'
+    '@nuxtjs/proxy',
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    sass: [
+      '~/assets/scss/foundation/**', // 読みませたいscssファイルを指定します。
+      '~/assets/scss/layout/**',
+      '~/assets/scss/object/component/**',
+      '~/assets/scss/object/project/**',
+      '~/assets/scss/object/utility/**'
+    ]
+  },
   proxy: {
     '/api': (this.dev) ? 'http://tanonder.test' : 'https://tanonder.heroku.com'
   },
