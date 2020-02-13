@@ -37,7 +37,6 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
   ],
   /*
   ** Nuxt.js modules
@@ -65,6 +64,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    baseUrl: process.env.BASE_URL || '/'
   },
   /*
   ** Build configuration
