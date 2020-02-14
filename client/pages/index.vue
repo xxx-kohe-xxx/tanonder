@@ -6,7 +6,7 @@
         client
       </h1>
       <h2 class="subtitle">
-        My bedazzling Nuxt.js project
+        hello world!!
       </h2>
       <div class="links">
         <a
@@ -23,7 +23,6 @@
         >
           GitHub
         </a>
-        <p>{{ data }}</p>
       </div>
     </div>
   </div>
@@ -35,11 +34,6 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
-  },
-  async asyncData ({ app }) {
-    const data = await app.$axios.$get('http://tanonder.test/api')
-    console.log(data)
-    return { data }
   }
 }
 </script>
