@@ -1,0 +1,35 @@
+.p-product-card {
+  // margin: $spacer-m;
+  background: $color-white;
+  border-radius: $radius-card;
+  border: 1px solid $color-border;
+  display: flex;
+  &__image-section {
+    display: block;
+    margin: $spacer-l;
+    width: 35vw;
+    position: relative;
+  }
+  &__image {
+    width: inherit;
+    padding-right: $spacer-m;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%);
+  }
+  &__info-section {
+    width: 65vw;
+    margin: $spacer-l;
+    display: block;
+  }
+  &__name {
+    margin: $spacer-m 0;
+    word-break: keep-all;
+  }
+  &__price {
+    margin: $spacer-m 0;
+  }
+  &__button {
+    margin: $spacer-m 0;
+  }
+}

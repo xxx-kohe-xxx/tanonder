@@ -1,0 +1,17 @@
+.p-product-select {
+  &__heading {
+    font-size: $font-size-l;
+    margin: $spacer-l;
+  }
+  &__product-card{
+    margin: $spacer-m;
+  }
+  &__total-component {
+    background: $color-tmp; // TODO:コンポーネント実装時に消す
+    bottom: 0;
+    display: block;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+  }
+}

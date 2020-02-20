@@ -6,14 +6,10 @@
         client
       </h1>
       <h2 class="subtitle">
-        My bedazzling Nuxt.js project
+        hello world!!
       </h2>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
+        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
           Documentation
         </a>
         <a
@@ -23,7 +19,9 @@
         >
           GitHub
         </a>
-        <p>{{ data }}</p>
+        <nuxt-link to="/select">
+          商品一覧
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -35,11 +33,6 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
-  },
-  async asyncData ({ app }) {
-    const data = await app.$axios.$get('http://tanonder.test/api')
-    console.log(data)
-    return { data }
   }
 }
 </script>
@@ -55,8 +48,8 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

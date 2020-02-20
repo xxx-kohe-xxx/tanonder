@@ -10,6 +10,7 @@ class ProductController extends Controller
   // 商品一覧取得API
   public function productsList(){
     $products = Product::select('id', 'name', 'path', 'price', 'category')->get();
+    \Debugbar::addMessage($products);
     return $products;
   }
 }
