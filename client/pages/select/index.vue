@@ -32,14 +32,14 @@ export default {
   watch: {
     $route: {
       async handler () {
-        await this.asyncData()
+        await this.getProducts()
         this.products = this.$store.state.product.products
       },
       immediate: true
     }
   },
   methods: {
-    async asyncData () {
+    async getProducts () {
       await this.$store.dispatch('product/getProducts')
     }
   }
