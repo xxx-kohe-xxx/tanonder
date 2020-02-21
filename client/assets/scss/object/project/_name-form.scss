@@ -1,0 +1,31 @@
+.p-register {
+  background: $color-white;
+  border-radius: $radius-card;
+  border: 1px solid $color-border;
+  &__input-section {
+    margin: $spacer-ll;
+    overflow: hidden;
+  }
+  &__label {
+    display: inline-block;
+    font-size: $font-size-l;
+    margin-bottom: $spacer-s;
+  }
+  &__input {
+    border: 1px solid $color-border;
+    border-radius: $radius-input;
+    display: block;
+    height: 30px;
+    width: 100%;
+  }
+  &__button {
+    background-color: $color-sub;
+    border-radius: $radius-button;
+    color: $color-white;
+    float: right;
+    font-size: $font-size-l;
+    height: 30px;
+    margin-top: $spacer-l;
+    width: 70px;
+  }
+}
