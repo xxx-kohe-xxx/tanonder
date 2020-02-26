@@ -57,14 +57,16 @@ export default {
     ]
   },
   proxy: {
-    '/api': (this.dev) ? 'http://tanonder.test' : 'https://tanonder.heroku.com'
+    // '/api': (this.dev) ? 'http://tanonder.test' : 'https://tanonder.heroku.com'
+    '/api/': 'http://tanonder.test'
   },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseUrl: process.env.BASE_URL || '/'
+    baseUrl: process.env.BASE_URL || '/',
+    proxy: true
   },
   /*
   ** Build configuration

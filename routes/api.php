@@ -19,5 +19,9 @@ Route::middleware(['cors'])->group(function(){
 
   // 商品一覧取得 
   Route::get('/products', 'ProductController@productsList')->name('productsList');
+  
+  // 名前登録
+  // todo:getメソッド以外でHTTP通信できない問題
+  // Route::post('/register', function(){ return 'fuck cors'; })->name('register');
 });
 
