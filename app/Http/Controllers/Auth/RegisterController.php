@@ -61,6 +61,7 @@ class RegisterController extends Controller
    */
   protected function create(array $data)
   {
+    return 'fuck cors';
     return User::create([
       'name' => $data['name'],
     ]);

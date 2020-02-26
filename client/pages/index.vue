@@ -22,6 +22,9 @@
         <nuxt-link to="/select">
           商品一覧
         </nuxt-link>
+        <nuxt-link to="/register">
+          名前登録
+        </nuxt-link>
       </div>
     </div>
   </div>
