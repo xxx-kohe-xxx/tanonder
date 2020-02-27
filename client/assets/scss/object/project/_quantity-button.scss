@@ -1,0 +1,22 @@
+.p-quantity-button {
+  &__button {
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-button;
+    font-size: $font-size-default;
+    height: 25px;
+    width: 25px;
+    &--correction {
+      font-size: $font-size-l;
+    }
+  }
+  &__input {
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-button;
+    font-size: $font-size-default;
+    height: 25px;
+    text-align: right;
+    width: 60px;
+  }
+}

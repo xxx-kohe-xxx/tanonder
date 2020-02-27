@@ -13,14 +13,18 @@
         </li>
       </ul>
       <div class="p-product-card__button">
-        増減ボタン
+        <QuantityButton />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import QuantityButton from './QuantityButton'
 export default {
+  components: {
+    QuantityButton
+  },
   props: {
     name: {
       type: String,
