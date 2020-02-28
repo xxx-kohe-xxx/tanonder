@@ -1,0 +1,7 @@
+POST http://tanonder.test/api/register HTTP/1.1
+content-type: application/json
+XSRF-Token: eyJpdiI6Ikd3UzM5Yis3Q1U5dHoxTnNmRzRadkE9PSIsInZhbHVlIjoiVVJvNmFZek5BV2ZDdkQrMWNqYlR1dmV3aVViaUFqcURaZmtWTkk4M05TeDBxYmlXNlc5a0ZDcVBJVjhva1M2OCIsIm1hYyI6IjI5MTUxNzY4NDE2OGRlZTJjMzE4ZTRkMDk0YTNkMjQwNGM2OWViZDYxODU5NWZlMTAyNzNmNTY1NDI1NjdmZmUifQ%3D%3D
+
+{
+  "name": "test"
+}

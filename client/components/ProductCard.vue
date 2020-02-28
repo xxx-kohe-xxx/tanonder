@@ -13,7 +13,7 @@
         </li>
       </ul>
       <div class="p-product-card__button">
-        増減ボタン
+        <QuantityButton v-on:quantity="setQuantity" />
       </div>
     </div>
   </div>
@@ -29,6 +29,19 @@ export default {
     price: {
       type: Number,
       required: true
+    }
+  },
+  data () {
+    return {
+      quantity: 0,
+      totalPrice: 0
+    }
+  },
+  methods: {
+    setQuantity (quantity) {
+      this.quantity = quantity
+      this.totalPrice = this.quantity * this.price
+      this.$emit('total', this.quantity, this.totalPrice)
     }
   }
 }
