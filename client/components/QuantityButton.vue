@@ -21,11 +21,12 @@ export default {
     decrease () {
       if (this.quantity !== 0) {
         this.quantity -= 1
+        this.$emit('quantity', this.quantity)
       }
     },
     increase () {
       this.quantity += 1
-      return false
+      this.$emit('quantity', this.quantity)
     }
   }
 }
