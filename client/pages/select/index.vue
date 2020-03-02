@@ -9,24 +9,37 @@
       v-bind:key="product.id"
       v-bind:name="product.name"
       v-bind:price="product.price"
+      v-on:total="total"
       class="p-product-select__product-card"
     />
-    <div class="p-product-select__total-component">
-      商品合計金額等
-    </div>
+    <!-- <TotalSection
+      v-bind:orderQuantity="orderQuantity"
+      v-bind:totalPrice="totalPrice"
+      @totalSubmit="total"
+      class="p-product-select__total-component"
+    /> -->
+    <TotalSection
+      v-bind:orderQuantity="orderQuantity"
+      v-bind:totalPrice="totalPrice"
+      class="p-product-select__total-component"
+    />
   </div>
 </template>
 
 <script>
 import ProductCard from '~/components/ProductCard.vue'
+import TotalSection from '~/components/TotalSection.vue'
 
 export default {
   components: {
-    ProductCard
+    ProductCard,
+    TotalSection
   },
   data () {
     return {
-      products: []
+      products: [],
+      orderQuantity: 0,
+      totalPrice: 0
     }
   },
   watch: {
@@ -41,6 +54,10 @@ export default {
   methods: {
     async getProducts () {
       await this.$store.dispatch('product/getProducts')
+    },
+    total (changeQuantity, changePrice) {
+      this.orderQuantity += changeQuantity
+      this.totalPrice += changePrice
     }
   }
 }

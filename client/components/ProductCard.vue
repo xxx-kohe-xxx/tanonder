@@ -13,14 +13,18 @@
         </li>
       </ul>
       <div class="p-product-card__button">
-        増減ボタン
+        <QuantityButton v-on:quantity="changeQuantity" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import QuantityButton from './QuantityButton'
 export default {
+  components: {
+    QuantityButton
+  },
   props: {
     name: {
       type: String,
@@ -29,6 +33,27 @@ export default {
     price: {
       type: Number,
       required: true
+    }
+  },
+  data () {
+    return {
+      quantity: 0
+    }
+  },
+  methods: {
+    changeQuantity (quantity) {
+      let changeQuantity
+      let changePrice
+      if (this.quantity > quantity) {
+        changeQuantity = -1
+        changePrice = -1 * this.price
+        this.quantity = quantity
+      } else if (this.quantity < quantity) {
+        changeQuantity = 1
+        this.quantity = quantity
+        changePrice = this.price
+      }
+      this.$emit('total', changeQuantity, changePrice)
     }
   }
 }

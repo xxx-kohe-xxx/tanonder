@@ -1,0 +1,36 @@
+.p-total-section {
+  background: $color-white;
+  border-top: 1px solid $color-border;
+  height: 50px;
+  width: 100%;
+  font-size: $font-size-l;
+  &__view-section {
+    display: flex;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: $spacer-l;
+  }
+  &__quantity {
+    margin: 0 $spacer-m;
+  }
+  &__price {
+    margin: 0 $spacer-m;
+  }
+  &__form {
+    margin: 0 $spacer-l;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+  }
+  &__button {
+    background-color: $color-sub;
+    border-radius: $radius-button;
+    color: $color-white;
+    float: right;
+    font-size: $font-size-l;
+    height: 30px;
+    width: 70px;
+  }
+}
