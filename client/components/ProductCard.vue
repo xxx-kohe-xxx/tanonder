@@ -13,7 +13,7 @@
         </li>
       </ul>
       <div class="p-product-card__button">
-        <QuantityButton v-on:quantity="setQuantity" />
+        <QuantityButton v-on:quantity="changeQuantity" />
       </div>
     </div>
   </div>
@@ -37,15 +37,23 @@ export default {
   },
   data () {
     return {
-      quantity: 0,
-      totalPrice: 0
+      quantity: 0
     }
   },
   methods: {
-    setQuantity (quantity) {
-      this.quantity = quantity
-      this.totalPrice = this.quantity * this.price
-      this.$emit('total', this.quantity, this.totalPrice)
+    changeQuantity (quantity) {
+      let changeQuantity
+      let changePrice
+      if (this.quantity > quantity) {
+        changeQuantity = -1
+        changePrice = -1 * this.price
+        this.quantity = quantity
+      } else if (this.quantity < quantity) {
+        changeQuantity = 1
+        this.quantity = quantity
+        changePrice = this.price
+      }
+      this.$emit('total', changeQuantity, changePrice)
     }
   }
 }

@@ -55,9 +55,9 @@ export default {
     async getProducts () {
       await this.$store.dispatch('product/getProducts')
     },
-    total (orderQuantity, totalPrice) {
-      this.orderQuantity += orderQuantity
-      this.totalPrice += totalPrice
+    total (changeQuantity, changePrice) {
+      this.orderQuantity += changeQuantity
+      this.totalPrice += changePrice
     }
   }
 }
