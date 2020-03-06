@@ -1,0 +1,29 @@
+.p-tanonder-menu {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 50px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  &__heading {
+    margin-top: $spacer-l;
+    margin-right: $spacer-xl;
+    margin-bottom: $spacer-xl;
+    float: right;
+    font-weight: bold;
+    font-size: $font-size-xl;
+  }
+  &__link-section {
+    display: block;
+    float: right;
+  }
+  &__link-item {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: $spacer-l;
+    padding-right: $spacer-xl;
+    text-align: right;
+    color: $color-sub;
+  }
+}
