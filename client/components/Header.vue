@@ -5,6 +5,11 @@
         tanonder
       </RouterLink>
     </h1>
+    <div class="p-header__menu-button">
+      <span class="p-header__menu-button--top" />
+      <span class="p-header__menu-button--middle" />
+      <span class="p-header__menu-button--bottom" />
+    </div>
   </header>
 </template>
 

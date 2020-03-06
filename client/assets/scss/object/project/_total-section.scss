@@ -4,6 +4,7 @@
   height: 50px;
   width: 100%;
   font-size: $font-size-l;
+  z-index: 3;
   &__view-section {
     display: flex;
     position: absolute;

@@ -2,6 +2,10 @@
   height: 50px;
   width: 100%;
   background: $color-main;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
   &__title {
     &-link {
     font-size: $font-size-header;
@@ -9,6 +13,51 @@
     font-weight: bold;
     padding: $spacer-m;
     // フォントを変えたい
+    }
+  }
+  &__menu-button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: $spacer-l;
+    border: 3px solid $color-white;
+    border-radius: $radius-button;
+    width: 36px;
+    height: 36px;
+    &--top {
+      display: inline-block;
+      background: $color-white;
+      position: absolute;
+      top: 48%;
+      left: 4px;
+      transform: translateY(-9px);
+      width: 22px;
+      height: 4px;
+      border: 1px solid $color-white;
+      border-radius: 2px;
+    }
+    &--middle {
+      display: inline-block;
+      background: $color-white;
+      position: absolute;
+      top: 48%;
+      left: 4px;
+      width: 22px;
+      height: 4px;
+      border: 1px solid $color-white;
+      border-radius: 2px;
+    }
+    &--bottom {
+      display: inline-block;
+      background: $color-white;
+      position: absolute;
+      top: 48%;
+      left: 4px;
+      transform: translateY(9px);
+      width: 22px;
+      height: 4px;
+      border: 1px solid $color-white;
+      border-radius: 2px;
     }
   }
 }
