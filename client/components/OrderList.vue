@@ -11,15 +11,15 @@
         金額
       </li>
     </ul>
-    <ul class="p-order-list__product">
+    <ul v-for="product in products" v-bind:key="product.name" class="p-order-list__product">
       <li class="p-order-list__product-name">
-        まぐろ
+        {{ product.name }}
       </li>
       <li class="p-order-list__product-quantity">
-        1
+        {{ product.quantity }}
       </li>
       <li class="p-order-list__product-price">
-        108
+        {{ product.price }}
       </li>
     </ul>
     <ul class="p-order-list__total">
@@ -41,7 +41,24 @@ export default {
   data () {
     return {
       quantity: 0,
-      price: 0
+      price: 0,
+      products: [
+        {
+          name: 'まぐろ',
+          quantity: 1,
+          price: 108
+        },
+        {
+          name: 'まぐろはらみ',
+          quantity: 1,
+          price: 108
+        },
+        {
+          name: 'サーモン',
+          quantity: 1,
+          price: 108
+        }
+      ]
     }
   }
 }
